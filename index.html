@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gemilang Katun Outbound - Petualangan Tak Terlupakan</title>
+    <meta name="description"
+        content="Gemilang Katun Outbound - Penyedia jasa outbound, team building, dan gathering profesional di Malang dan Batu, Jawa Timur." />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <style>
+        :root {
+            --primary: #06b6d4;
+            --primary-dark: #0891b2;
+            --secondary: #84cc16;
+            --forest: #0f172a;
+            --bg-light: #f8fafc;
+            --surface-light: #ffffff;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #0f172a;
+            background: var(--bg-light);
+        }
+
+        /* Navbar */
+        .navbar-brand-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(6, 182, 212, 0.1);
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.4rem;
+        }
+
+        .navbar {
+            transition: box-shadow 0.3s;
+        }
+
+        .navbar.scrolled {
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .nav-link {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #475569 !important;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--primary) !important;
+        }
+
+        /* Hero */
+        .hero-section {
+            min-height: 640px;
+            background: linear-gradient(rgba(15, 23, 42, 0.5), rgba(15, 23, 42, 0.8)),
+                url('https://lh3.googleusercontent.com/aida-public/AB6AXuCsvp6NJDJGSCGnrl2qvhxo139wxRdM9g9OSzfqu8BdtZMSj0F0Oo6hsxRQ9CsjPzJzY_-kI2eF9mRZcia-PGzTzRQXZJXehMajoBSIZud3hEbE72eA7jqfuNdfbxxEhR2E7QujBqNr5Raaoe0FRw4KEAF_HNAKRVS-VZVkXAeGXdXJp6eVTvziv3JS8BrlZ8FeBY0JwSsEoCVbOtEt62eskIzSJbfSt-O4_dXfZlA544eqIeNv--DOAVH1L7RevCOnb_8DSSAgKSk') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.35rem 1rem;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.18);
+            backdrop-filter: blur(6px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .hero-badge .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--primary);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1
+            }
+
+            50% {
+                opacity: 0.4
+            }
+        }
+
+        .hero-section h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 1.15;
+        }
+
+        @media(min-width:768px) {
+            .hero-section h1 {
+                font-size: 4rem;
+            }
+        }
+
+        .btn-primary-custom {
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            padding: 0.85rem 2rem;
+            border-radius: 0.5rem;
+            font-weight: 700;
+            font-size: 1rem;
+            box-shadow: 0 8px 24px rgba(6, 182, 212, 0.25);
+            transition: all 0.3s;
+        }
+
+        .btn-primary-custom:hover {
+            background: var(--primary-dark);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .bounce-arrow {
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0)
+            }
+
+            50% {
+                transform: translateY(8px)
+            }
+        }
+
+        /* Stats */
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--forest);
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        /* Cards */
+        .service-card {
+            border: 1px solid #f1f5f9;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            transition: all 0.3s;
+            background: #fff;
+        }
+
+        .service-card:hover {
+            box-shadow: 0 12px 40px rgba(6, 182, 212, 0.1);
+            transform: translateY(-4px);
+        }
+
+        .service-card .card-img-wrap {
+            height: 240px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .service-card .card-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .service-card:hover .card-img-wrap img {
+            transform: scale(1.08);
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(4px);
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--forest);
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .card-badge .bi {
+            color: var(--secondary);
+        }
+
+        .section-label {
+            color: var(--primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.06em;
+        }
+
+        .section-title {
+            font-weight: 800;
+            color: var(--forest);
+            line-height: 1.2;
+        }
+
+        /* About */
+        .about-img-wrap {
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+        }
+
+        .about-float-card {
+            position: absolute;
+            bottom: 1.5rem;
+            left: 1.5rem;
+            right: 1.5rem;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(8px);
+            padding: 1.25rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            border-left: 4px solid var(--primary);
+        }
+
+        .about-icon-box {
+            width: 48px;
+            height: 48px;
+            border-radius: 0.5rem;
+            background: rgba(6, 182, 212, 0.1);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        /* Why Us */
+        .why-bg-shape {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 33%;
+            height: 100%;
+            background: rgba(6, 182, 212, 0.05);
+            transform: skewX(-12deg) translateX(25%);
+        }
+
+        /* Testimonials */
+        .testimonial-card {
+            background: #fff;
+            border: 1px solid #f1f5f9;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stars {
+            color: var(--secondary);
+            font-size: 0.9rem;
+        }
+
+        /* CTA */
+        .cta-section {
+            background: var(--forest);
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url('https://www.transparenttextures.com/patterns/cubes.png');
+            opacity: 0.1;
+        }
+
+        /* Footer */
+        .footer {
+            background: #fff;
+            border-top: 1px solid #f1f5f9;
+        }
+
+        .footer h5 {
+            font-weight: 700;
+            color: var(--forest);
+        }
+
+        .footer a {
+            color: #64748b;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .footer a:hover {
+            color: var(--primary);
+        }
+
+        .footer-social a {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+
+        .footer-social a:hover {
+            color: var(--primary);
+        }
+
+        /* Floating Buttons */
+        .floating-buttons {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .btn-wa {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: #25d366;
+            color: #fff;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .btn-wa:hover {
+            background: #1ebe57;
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        .btn-scroll-top {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);
+            transition: all 0.3s;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .btn-scroll-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .btn-scroll-top:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        /* Partner logos */
+        .partner-logos {
+            filter: grayscale(100%);
+            opacity: 0.5;
+            transition: all 0.5s;
+        }
+
+        .partner-logos:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-light bg-white sticky-top border-bottom" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="index.html">
+                <span class="navbar-brand-icon"><i class="bi bi-compass"></i></span>
+                <span style="color: var(--forest); font-size: 1.15rem;">Gemilang Katun Outbound</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-1">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Halaman Utama</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero-section text-center text-white" id="hero">
+        <div class="container position-relative" style="z-index:2;">
+            <div class="d-flex flex-column align-items-center gap-3">
+                <span class="hero-badge">
+                    <span class="dot"></span> Buka Untuk Musim 2024
+                </span>
+                <h1>Petualangan Tak Terlupakan di <span style="color: var(--primary);">Malang</span></h1>
+                <p class="lead text-white-50 mx-auto" style="max-width: 640px; font-size: 1.15rem;">
+                    Jasa outbound profesional untuk tim korporat, sekolah, dan pencinta petualangan di alam Jawa Timur.
+                </p>
+                <div class="mt-2">
+                    <a href="https://wa.me/6282211221909" target="_blank"
+                        class="btn btn-primary-custom d-inline-flex align-items-center gap-2">
+                        <span>Mulai Petualangan Anda</span>
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="position-absolute bottom-0 start-50 translate-middle-x mb-4 bounce-arrow text-white-50">
+            <i class="bi bi-chevron-double-down" style="font-size: 2rem;"></i>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="py-5 bg-white border-bottom">
+        <div class="container">
+            <div class="row text-center g-4">
+                <div class="col-6 col-md-3">
+                    <p class="stat-number mb-0">500+</p>
+                    <p class="stat-label mb-0">Acara Sukses</p>
+                </div>
+                <div class="col-6 col-md-3">
+                    <p class="stat-number mb-0">50+</p>
+                    <p class="stat-label mb-0">Pemandu Bersertifikat</p>
+                </div>
+                <div class="col-6 col-md-3">
+                    <p class="stat-number mb-0">10rb+</p>
+                    <p class="stat-label mb-0">Klien Puas</p>
+                </div>
+                <div class="col-6 col-md-3">
+                    <p class="stat-number mb-0">15</p>
+                    <p class="stat-label mb-0">Tahun Pengalaman</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artikel Terbaru -->
+    <section class="py-5" id="layanan" style="background: var(--bg-light);">
+        <div class="container py-4">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end gap-3 mb-5">
+                <div style="max-width: 600px;">
+                    <span class="section-label d-block mb-2">Artikel Terbaru</span>
+                    <h2 class="section-title fs-2">Inspirasi Kegiatan Outdoor Anda</h2>
+                    <p class="text-muted mt-3">Temukan ide-ide menarik untuk family gathering, outbound, dan petualangan
+                        seru bersama tim Anda di Batu dan Malang.</p>
+                </div>
+                <a href="blog.html" class="d-none d-md-flex align-items-center gap-1 text-decoration-none fw-bold"
+                    style="color: var(--primary);">
+                    Lihat Semua Artikel <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card h-100">
+                        <div class="card-img-wrap">
+                            <span class="card-badge"><i class="bi bi-star-fill"></i> Populer</span>
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiGqrY7MVjYXUGhHAHf8FrEBRJHAxaHamHFx7Qw7-D_yuoyItleho9XUJNdraZnJvBSpNEM95wVnlwTIkYVzYFxV4Dm3Ro2BHNU-fW0qZSuXE58CE8qAzTkXefC8iIm2XcS6ofc1vMM40XSOYvAx_GtdaN3EHWvy1PVylrBs3UZ5Zs2yT6sfd-jaUJzccIB9Pse_zmJbITCmfm_MDk5IUQNjS0dwRIjKSr3kyPp1u4QN3-Ig313ip8iPepCX9P145uP3VDGIftK4k"
+                                alt="Family Gathering Hotel Batu Malang" />
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <i class="bi bi-people-fill" style="color: var(--primary);"></i>
+                                <span class="text-uppercase fw-bold text-muted"
+                                    style="font-size: 0.75rem; letter-spacing: 0.05em;">Family Gathering</span>
+                            </div>
+                            <h5 class="fw-bold mb-2"><a href="artikel-1.html" class="text-decoration-none"
+                                    style="color:var(--forest);">Menciptakan Momen Hangat dengan Paket Family Gathering
+                                    Hotel Batu Malang</a></h5>
+                            <p class="text-muted small mb-3">Membawa seluruh anggota keluarga besar perusahaan untuk
+                                berlibur bersama dengan udara sejuk pegunungan dan fasilitas hotel yang nyaman.</p>
+                            <a href="artikel-1.html"
+                                class="text-decoration-none fw-bold d-inline-flex align-items-center gap-1"
+                                style="color: var(--forest); font-size: 0.9rem;">
+                                Baca Selengkapnya <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card h-100">
+                        <div class="card-img-wrap">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXlU_FbeoybZZStB_Ir6O4FNpzDNnr86O-heGi15MB8G_lkuxfSzKziWflyieccMwJospKfzrPBtv_wpNDfx1kPjFwZmeDjylUh4tv1C0PkZHXTGuDNvj9FEhchEkpvMLHWM-ToAS63wwfRt3z0InJ3oIkqV-l7u7NwEsWuw_me5Oq7HdIGKJm_eec9RIfP4OzHF2KNyraZqevR4eFVKVVktVKr1lV_jaoC9iElKr6c1q6s8MhuzFw0YEJ6BopGMuARMNMv_Yyk4Q"
+                                alt="Pantai Goa China Malang" />
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <i class="bi bi-sun-fill" style="color: var(--secondary);"></i>
+                                <span class="text-uppercase fw-bold text-muted"
+                                    style="font-size: 0.75rem; letter-spacing: 0.05em;">Pantai & Gathering</span>
+                            </div>
+                            <h5 class="fw-bold mb-2"><a href="artikel-3.html" class="text-decoration-none"
+                                    style="color:var(--forest);">Suasana Santai nan Eksotis dalam Paket Gathering Pantai
+                                    Goa China Malang</a></h5>
+                            <p class="text-muted small mb-3">Menjauh dari hiruk-pikuk kota dan merasakan embusan angin
+                                laut di pantai pasir putih dengan latar belakang gugusan pulau karang.</p>
+                            <a href="artikel-3.html"
+                                class="text-decoration-none fw-bold d-inline-flex align-items-center gap-1"
+                                style="color: var(--forest); font-size: 0.9rem;">
+                                Baca Selengkapnya <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card h-100">
+                        <div class="card-img-wrap">
+                            <span class="card-badge" style="background: var(--secondary); color: #fff;"><i
+                                    class="bi bi-check-circle-fill"></i> Terbaik</span>
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9u-MgEuyiNX3ezhNOOjk0uReP8ol4Gm5FomXccvINFPoVZsYs-QnxkFQmxM4qFwxZq_LUbFvUM9QRmR0UB24pA7TFz3rkpFZyqRwmb-HhLBpDmFl4glU6zU1bbt84TPkTquKrG1Rf4IuBXnN__MVkHdWdnoeaxhiOHDIOEUV7XTazBT3tMv1tI1e2ZLqyfmLZZpByEKYvhot-N-1zyWvN5ZXvYlNx1OyQpe6ce2r8raSjx1rFKd00OWK01FpHjY-R51MWKERTu98"
+                                alt="Rafting Batu Malang" />
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <i class="bi bi-water" style="color: #3b82f6;"></i>
+                                <span class="text-uppercase fw-bold text-muted"
+                                    style="font-size: 0.75rem; letter-spacing: 0.05em;">Adrenalin & Petualangan</span>
+                            </div>
+                            <h5 class="fw-bold mb-2"><a href="artikel-5.html" class="text-decoration-none"
+                                    style="color:var(--forest);">Tantang Batas Kemampuan Tim dengan Paket Rafting Batu
+                                    Malang Durasi Panjang</a></h5>
+                            <p class="text-muted small mb-3">Menguji stamina, kekompakan, dan ketahanan mental tim Anda
+                                menyusuri derasnya hulu Sungai Brantas selama 2,5-3 jam.</p>
+                            <a href="artikel-5.html"
+                                class="text-decoration-none fw-bold d-inline-flex align-items-center gap-1"
+                                style="color: var(--forest); font-size: 0.9rem;">
+                                Baca Selengkapnya <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-4 text-center d-md-none">
+                <a href="blog.html" class="btn btn-outline-secondary w-100 fw-bold">Lihat Semua Artikel</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang Kami -->
+    <section class="py-5 bg-white" id="tentang-kami">
+        <div class="container py-4">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <div class="about-img-wrap position-relative">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdqg6GuJ5JGj3vzsH71BARXLLRh8GDbuSourKGcAweTviQaHmHz0vNRJmuo7XqTm2Y9OlLjGzayEFkety5C3IJgQXiYcB4wauXe9ehLDR4nXThhDsQTwdXSi6BQXlEsqMCvGtTLDB8PF1rO1eP9JKUEuGbp7Ci-XZugzONhAVPNGCaqc6URa8cOiFjDkxU5iUS7KMZm6XLW01tjYk_HfnJ37eJ_Hpu0BJd1B3nEbJNy3IJe5moVzDRS400QnJPmFoHTUdP0cffRhI"
+                            alt="Peralatan keselamatan outbound" class="w-100"
+                            style="aspect-ratio: 4/3; object-fit: cover;" />
+                        <div class="about-float-card">
+                            <div class="d-flex align-items-start gap-3">
+                                <div class="about-icon-box"><i class="bi bi-shield-check"></i></div>
+                                <div>
+                                    <h6 class="fw-bold mb-1">Jaminan Keselamatan</h6>
+                                    <p class="text-muted small mb-0">Kami menjaga standar keselamatan tertinggi dengan
+                                        inspeksi peralatan rutin dan perlindungan asuransi.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <span class="section-label d-block mb-2" style="color: var(--secondary);">Tentang Kami</span>
+                    <h2 class="section-title fs-2 mb-3">Gemilang Katun Outbound</h2>
+                    <p class="text-muted mb-4" style="font-size: 1.05rem; line-height: 1.8;">
+                        Gemilang Katun Outbound adalah penyedia jasa outbound, team building, dan gathering profesional
+                        yang berpengalaman di kawasan Malang dan Batu, Jawa Timur. Kami menghadirkan program yang
+                        inklusif dan menyenangkan untuk keluarga, korporat, sekolah, dan komunitas.
+                    </p>
+                    <p class="text-muted mb-4" style="font-size: 1.05rem; line-height: 1.8;">
+                        Dengan tim instruktur bersertifikat dan pemahaman mendalam terhadap medan lokal, kami merancang
+                        pengalaman yang tidak hanya seru, tetapi juga sarat makna kebersamaan dan pengembangan karakter.
+                    </p>
+                    <a href="https://wa.me/6282211221909" target="_blank"
+                        class="btn btn-primary-custom d-inline-flex align-items-center gap-2">
+                        <i class="bi bi-whatsapp"></i> Hubungi Kami
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mengapa Memilih Kami -->
+    <section class="py-5 position-relative overflow-hidden" id="mengapa-kami" style="background: var(--bg-light);">
+        <div class="why-bg-shape d-none d-lg-block"></div>
+        <div class="container py-4 position-relative" style="z-index: 2;">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <span class="section-label d-block mb-2" style="color: var(--secondary);">Mengapa Memilih
+                        Kami</span>
+                    <h2 class="section-title fs-2 mb-3">Pengalaman, Keselamatan, dan Kustomisasi</h2>
+                    <p class="text-muted mb-4" style="font-size: 1.05rem;">Kami tidak hanya mengorganisir perjalanan;
+                        kami merancang pengalaman yang meninggalkan kenangan abadi.</p>
+                    <div class="d-flex flex-column gap-4">
+                        <div class="d-flex gap-3">
+                            <div class="about-icon-box"><i class="bi bi-patch-check-fill"></i></div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Instruktur Bersertifikat</h6>
+                                <p class="text-muted mb-0">Pemandu kami bersertifikat BNSP dan terlatih dalam
+                                    pertolongan pertama serta keselamatan alam liar.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-3">
+                            <div class="about-icon-box"><i class="bi bi-sliders"></i></div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Program Kustom</h6>
+                                <p class="text-muted mb-0">Program yang dibuat khusus sesuai ukuran grup, anggaran, dan
+                                    tujuan Anda.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-3">
+                            <div class="about-icon-box"><i class="bi bi-geo-alt-fill"></i></div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Lokasi Premium</h6>
+                                <p class="text-muted mb-0">Akses eksklusif ke lokasi terbaik di Batu, Bromo, dan
+                                    destinasi tersembunyi di Malang.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIPyuxRZoRYkdayHHoBU0mwtzyl6LgciPBB7OsUQMyPNjkAk_O7MAFua06xHY3prvbpWLP12nWVu-2OVQUZEJHJWf8LRGpRW9HW2YVU_XMag3yntpfhNbJIySIRHpAEOQ5BiiUPJpDWQ7l1a4_LymXQ4I9F9-X2LecxfJYQaE4mQ4c4Pkr61Qja_ydF_XYhm0kEG8-JfPfwW4cSy58Ju_4yox7y70Nih4kqYG2TpDHlNY04ziVxThN9O862GNZSB6D5VKBFZRRK2w"
+                        alt="Hutan hijau lebat" class="rounded-4 shadow-lg w-100"
+                        style="max-height: 420px; object-fit: cover;" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimoni -->
+    <section class="py-5 bg-white" id="testimoni">
+        <div class="container py-4">
+            <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+                <h2 class="section-title fs-2 mb-2">Dipercaya Perusahaan Hebat</h2>
+                <p class="text-muted">Dengarkan apa kata klien kami tentang petualangan mereka bersama kami.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="stars mb-3"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i></div>
+                        <p class="text-muted fst-italic mb-4 flex-grow-1">"Retreat perusahaan paling terorganisir dan
+                            menyenangkan yang pernah kami alami. Fasilitatornya enerjik dan profesional!"</p>
+                        <div class="d-flex align-items-center gap-3 mt-auto">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnSN-JbmOAk0exCT09lNsWy1G-WBXE19tDTD23Hw3JUbxt9bC3vZizxwOAr9txFsMd8XqhD9qdunUPH8iXuu6_B1Gt4AszRszi-ZC85hExnXxvOn_ZbEJ89i4eX_-tKmPS-EBLuE-_equgYMeQRLLiqoGqDhUTzV9aNivYIBlBR-gv0HexTksnzwys0LYk284hxq7cJp1Q-L6DdiSpQ-fxxeh3dw5u_v4BE-i35fHppurvoKQM7DUIpnHlFF5IJQp4DwsukYU2xyI"
+                                alt="Sarah Jenkins" class="rounded-circle" width="48" height="48"
+                                style="object-fit: cover;" />
+                            <div>
+                                <h6 class="fw-bold mb-0" style="font-size: 0.9rem;">Sarah Jenkins</h6>
+                                <small class="text-muted">Manajer HR, TechCorp</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="stars mb-3"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i></div>
+                        <p class="text-muted fst-italic mb-4 flex-grow-1">"Siswa kami belajar banyak tentang kerja tim
+                            dan ketahanan. Keselamatan sangat terjaga, yang merupakan prioritas kami."</p>
+                        <div class="d-flex align-items-center gap-3 mt-auto">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYmP5EkCig8W34R-FP8wrJCpp3e5Pgw_iPVoB5f5TYISPbXTG-g890viNWR9onRghrzoO0FP5cdsinjXc_J00YAFY2qy3rcv_owTzBdOHVMhcDjFOUeyFhkMyf6iTB44JXlEfq7MS3SyRiIGb2lBREsd-2wGKtqk3lOJp7VPLmcQq5mVzrQmLQZvLeMC4aQ-qHZSZg5x92-q4XMqICVdSrcmT2bvbofXWrJVOqF8n_2SUGvsr7ZvJLJuuiTVVZRgwNsp0MaJhKhjg"
+                                alt="Budi Santoso" class="rounded-circle" width="48" height="48"
+                                style="object-fit: cover;" />
+                            <div>
+                                <h6 class="fw-bold mb-0" style="font-size: 0.9rem;">Budi Santoso</h6>
+                                <small class="text-muted">Kepala Sekolah, Global School</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="stars mb-3"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-half"></i></div>
+                        <p class="text-muted fst-italic mb-4 flex-grow-1">"Pengalaman raftingnya gila! Sangat
+                            direkomendasikan untuk siapa saja yang berkunjung ke Malang. Pasti pesan lagi."</p>
+                        <div class="d-flex align-items-center gap-3 mt-auto">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoiEV-34Nu7ZY1tK8yX2cyN0Nf6Bdqi3FEmppW6vyrv09q1sME8Aa6v3Izv3D1RvWXtoHy1OG5g_ipBVabXykIyPg9AKuCNEvmIqDnXV3u5sIwQYnC8hzzqiXFmzCy_tjZbuodSiRFHgTCOn4B1qrir_TPFuOGmD3ZA36OXl_a5e6Ey9FSPTmqJtSxFrUzHXr2NU2QMcF4SLK49RteLDfacCSxe6t6xQZ2L4mcNMq2HuO6lKSkFDouRgcI19nJWwx7PmpbI2eIs9I"
+                                alt="Michael Chen" class="rounded-circle" width="48" height="48"
+                                style="object-fit: cover;" />
+                            <div>
+                                <h6 class="fw-bold mb-0" style="font-size: 0.9rem;">Michael Chen</h6>
+                                <small class="text-muted">Wisatawan dari Singapura</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Partners -->
+            <div class="mt-5 pt-4 border-top">
+                <p class="text-center text-muted text-uppercase fw-bold small mb-4" style="letter-spacing: 0.08em;">
+                    Mitra Terpercaya Kami</p>
+                <div class="d-flex flex-wrap justify-content-center gap-4 gap-md-5 partner-logos">
+                    <div class="d-flex align-items-center gap-2 fw-bold text-muted fs-5"><i class="bi bi-mountains"></i>
+                        Traveloka</div>
+                    <div class="d-flex align-items-center gap-2 fw-bold text-muted fs-5"><i class="bi bi-airplane"></i>
+                        Tiket.com</div>
+                    <div class="d-flex align-items-center gap-2 fw-bold text-muted fs-5"><i class="bi bi-building"></i>
+                        Astra</div>
+                    <div class="d-flex align-items-center gap-2 fw-bold text-muted fs-5"><i
+                            class="bi bi-mortarboard"></i> UB Malang</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section py-5">
+        <div class="container text-center position-relative py-5" style="z-index: 2;">
+            <h2 class="fw-bold display-6 mb-3">Siap untuk petualangan berikutnya?</h2>
+            <p class="text-white-50 mx-auto mb-4" style="max-width: 640px; font-size: 1.1rem;">Pesan sekarang dan
+                dapatkan diskon spesial 10% untuk reservasi lebih awal di musim liburan mendatang.</p>
+            <a href="https://wa.me/6282211221909" target="_blank" class="btn btn-primary-custom btn-lg px-5 shadow-lg">
+                Pesan Petualangan Anda Sekarang
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-lg-4">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <span class="d-flex align-items-center justify-content-center rounded"
+                            style="width:32px;height:32px;background:var(--primary);color:#fff;font-size:1rem;"><i
+                                class="bi bi-compass"></i></span>
+                        <h5 class="mb-0 fw-bold">Gemilang Katun Outbound</h5>
+                    </div>
+                    <p class="text-muted small" style="line-height: 1.7;">Mitra utama Anda untuk petualangan alam, team
+                        building, dan program experiential learning di Jawa Timur.</p>
+                    <div class="footer-social d-flex gap-2 mt-2">
+                        <a href="#"><i class="bi bi-globe"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h6 class="fw-bold mb-3" style="color: var(--forest);">Tautan Cepat</h6>
+                    <ul class="list-unstyled d-flex flex-column gap-2">
+                        <li><a href="#tentang-kami">Tentang Kami</a></li>
+                        <li><a href="#layanan">Layanan Kami</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="https://wa.me/6282211221909" target="_blank">Hubungi Kami</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <h6 class="fw-bold mb-3" style="color: var(--forest);">Info Kontak</h6>
+                    <ul class="list-unstyled d-flex flex-column gap-2 small text-muted">
+                        <li class="d-flex align-items-start gap-2"><i class="bi bi-geo-alt-fill"
+                                style="color: var(--primary);"></i> Malang, Jawa Timur, Indonesia</li>
+                        <li class="d-flex align-items-center gap-2"><i class="bi bi-whatsapp"
+                                style="color: var(--primary);"></i> 0822-1122-1909</li>
+                        <li class="d-flex align-items-center gap-2"><i class="bi bi-envelope"
+                                style="color: var(--primary);"></i> hello@gemilangkatun.com</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <div class="rounded-3 overflow-hidden" style="height: 180px;">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFsNtEpYPh2vUAvR9CmSiDWWbtgzQRnhyKryW1vernnOaa7YgdU2tgJKQZWPDjt4OjMO_TdjTGdnIYLFGbQVYFeRkKZsuFRa5l2vLCVjChmPZQQ9mwcN3M6r7PC0d55Vda3rowjzREWcXPkzgdqLd5Zv8hD4LpXjHX7ADBozhYpADLTYfoEhqQno7mWAJ6GQcJS96qfTrTyrP8yA7ZKhtBpO7_05S3TxzTogdA7NNcAkpvo_YH8b5oVXB01VKFekYAHKWzEaQp_28"
+                            alt="Peta Malang" class="w-100 h-100" style="object-fit: cover;" />
+                    </div>
+                </div>
+            </div>
+            <div
+                class="border-top pt-4 d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+                <p class="text-muted small mb-0">© 2024 Gemilang Katun Outbound. Hak cipta dilindungi.</p>
+                <div class="d-flex gap-3">
+                    <a href="#" class="small">Kebijakan Privasi</a>
+                    <a href="#" class="small">Syarat & Ketentuan</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <button class="btn-scroll-top" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+            <i class="bi bi-arrow-up"></i>
+        </button>
+        <a href="https://wa.me/6282211221909" target="_blank" class="btn-wa" title="Chat via WhatsApp">
+            <i class="bi bi-whatsapp"></i>
+        </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Scroll top button visibility
+        window.addEventListener('scroll', function () {
+            const btn = document.getElementById('scrollTopBtn');
+            if (window.scrollY > 300) {
+                btn.classList.add('show');
+            } else {
+                btn.classList.remove('show');
+            }
+            // Navbar shadow
+            const nav = document.getElementById('mainNavbar');
+            if (window.scrollY > 10) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+
+</html>

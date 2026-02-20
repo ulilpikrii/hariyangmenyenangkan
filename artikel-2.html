@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paket Outbound Training Karyawan di Batu - Gemilang Katun Outbound</title>
+    <meta name="description"
+        content="Membentuk Karakter Tangguh Melalui Paket Outbound Training Karyawan di Batu bersama Gemilang Katun Outbound." />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <style>
+        :root {
+            --primary: #06b6d4;
+            --primary-dark: #0891b2;
+            --secondary: #84cc16;
+            --forest: #0f172a;
+            --bg-light: #f8fafc;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #0f172a;
+            background: var(--bg-light);
+        }
+
+        .navbar-brand-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(6, 182, 212, 0.1);
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.4rem;
+        }
+
+        .navbar {
+            transition: box-shadow 0.3s;
+        }
+
+        .navbar.scrolled {
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .nav-link {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #475569 !important;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--primary) !important;
+        }
+
+        .article-hero {
+            min-height: 340px;
+            background: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.85)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuD5vBtk-sgV4tWOE23nC8tmum74KtXwEHwh97jk-7si9R4tBUMkKf0qxbA2v1zFq5tTavKQWX0YCbdu1yhTVlS_32TGCZ21g5OOPrz8TLm3jxS06PN8YKBUK4GoOdtQRAvSX1sA-wHxDC5InCBjD3n_r9T-bJr30wGVxrYUSNcK-8SitavhbZZrDORSUx383aG3AKYQsle5VtZ9cIZU5EsNSiQRlZROXZuF5bn0UGidhuXNcyVSGr3_DmIOOkCL3xvS7XRxoksdPOY') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .article-content {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: #334155;
+        }
+
+        .article-content p {
+            margin-bottom: 1.25rem;
+        }
+
+        .btn-primary-custom {
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 700;
+            font-size: 0.95rem;
+            box-shadow: 0 6px 20px rgba(6, 182, 212, 0.25);
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary-custom:hover {
+            background: var(--primary-dark);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            background: #fff;
+            border-top: 1px solid #f1f5f9;
+        }
+
+        .footer h5,
+        .footer h6 {
+            font-weight: 700;
+            color: var(--forest);
+        }
+
+        .footer a {
+            color: #64748b;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .footer a:hover {
+            color: var(--primary);
+        }
+
+        .footer-social a {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+
+        .footer-social a:hover {
+            color: var(--primary);
+        }
+
+        .floating-buttons {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .btn-wa {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: #25d366;
+            color: #fff;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .btn-wa:hover {
+            background: #1ebe57;
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        .btn-scroll-top {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);
+            transition: all 0.3s;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .btn-scroll-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .btn-scroll-top:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-light bg-white sticky-top border-bottom" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="index.html">
+                <span class="navbar-brand-icon"><i class="bi bi-compass"></i></span>
+                <span style="color:var(--forest);font-size:1.15rem;">Gemilang Katun Outbound</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-1">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Halaman Utama</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="article-hero text-center text-white">
+        <div class="container" style="max-width:800px;">
+            <span class="badge bg-info text-dark fw-bold mb-3">HR & Leadership Development</span>
+            <h1 class="fw-bold display-6 mb-3">Membentuk Karakter Tangguh Melalui Paket Outbound Training Karyawan di
+                Batu</h1>
+            <p class="text-white-50">WA: 0822-1122-1909 | Gemilang Katun Outbound</p>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container" style="max-width:800px;">
+            <div class="mb-4">
+                <a href="blog.html"
+                    class="text-decoration-none d-inline-flex align-items-center gap-1 text-muted fw-bold"
+                    style="font-size:0.9rem;">
+                    <i class="bi bi-arrow-left"></i> Kembali ke Blog
+                </a>
+            </div>
+            <article class="article-content">
+                <p>(Hub: 0822-1122-1909) Menghadapi dinamika bisnis yang terus berubah menuntut setiap perusahaan untuk
+                    memiliki tim yang solid, adaptif, dan memiliki jiwa kepemimpinan yang kuat. Rutinitas kantor yang
+                    monoton sering kali membuat karyawan terjebak dalam zona nyaman dan memicu ego sektoral antar
+                    divisi. Membawa mereka keluar dari kubikel dan berinteraksi di alam terbuka lewat paket outbound
+                    training karyawan di batu adalah salah satu metode experiential learning yang paling efektif untuk
+                    mereset kembali mentalitas kerja tim Anda.</p>
+
+                <p>Kontur geografis Batu yang didominasi dataran tinggi dan kawasan hutan pinus yang rimbun menawarkan
+                    medium pembelajaran yang luar biasa. Berjalan di bawah tajuk pohon pinus yang rapat dengan kadar
+                    oksigen yang sangat bersih terbukti mampu menurunkan tingkat stres dan membuka pikiran peserta untuk
+                    menerima materi pelatihan. Tim Gemilang Katun Outbound sering menggunakan area-area dengan topografi
+                    sedikit berbukit untuk simulasi permainan problem solving. Medan yang menantang ini secara alami
+                    akan memunculkan karakter asli seseorang, memperlihatkan siapa yang memiliki inisiatif pemimpin dan
+                    siapa yang mampu menjadi eksekutor yang baik.</p>
+
+                <p>Program yang kami tawarkan bukan sekadar permainan tepuk tangan atau bernyanyi bersama. Dalam setiap
+                    paket outbound training karyawan di batu, instruktur kami menyelipkan nilai-nilai corporate culture
+                    yang sedang dibangun oleh perusahaan Anda. Kami di Gemilang Katun Outbound akan melakukan sesi
+                    briefing mendalam dengan tim HR Anda sebelum merancang modul. Apakah tujuannya untuk meningkatkan
+                    communication skill, team work, atau decision making, semuanya akan diterjemahkan ke dalam bentuk
+                    simulasi di lapangan.</p>
+
+                <p>Fasilitator kami adalah tenaga lapangan bersertifikat yang paham betul cara melakukan
+                    debriefing—sebuah sesi diskusi interaktif setelah permainan selesai, di mana peserta diajak
+                    merefleksikan makna kegiatan dan mengaitkannya dengan pekerjaan sehari-hari di kantor. Jangan
+                    biarkan produktivitas tim Anda stagnan. Hubungi Gemilang Katun Outbound sekarang untuk mendiskusikan
+                    modul paket outbound training karyawan di batu yang paling tepat untuk kebutuhan pengembangan SDM di
+                    perusahaan Anda.</p>
+
+                <div class="bg-light rounded-3 p-4 mt-4 border-start border-4"
+                    style="border-color: var(--primary) !important;">
+                    <h5 class="fw-bold mb-2">Gemilang Katun Outbound</h5>
+                    <p class="mb-2">Hubungi kami untuk informasi lebih lanjut dan reservasi:</p>
+                    <a href="https://wa.me/6282211221909" target="_blank" class="btn-primary-custom">
+                        <i class="bi bi-whatsapp"></i> 0822-1122-1909
+                    </a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-lg-4">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <span class="d-flex align-items-center justify-content-center rounded"
+                            style="width:32px;height:32px;background:var(--primary);color:#fff;font-size:1rem;"><i
+                                class="bi bi-compass"></i></span>
+                        <h5 class="mb-0 fw-bold">Gemilang Katun Outbound</h5>
+                    </div>
+                    <p class="text-muted small" style="line-height:1.7;">Mitra utama Anda untuk petualangan alam, team
+                        building, dan program experiential learning di Jawa Timur.</p>
+                    <div class="footer-social d-flex gap-2 mt-2"><a href="#"><i class="bi bi-globe"></i></a><a
+                            href="#"><i class="bi bi-instagram"></i></a><a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h6 class="fw-bold mb-3">Tautan Cepat</h6>
+                    <ul class="list-unstyled d-flex flex-column gap-2">
+                        <li><a href="index.html#tentang-kami">Tentang Kami</a></li>
+                        <li><a href="index.html#layanan">Layanan Kami</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="https://wa.me/6282211221909" target="_blank">Hubungi Kami</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <h6 class="fw-bold mb-3">Info Kontak</h6>
+                    <ul class="list-unstyled d-flex flex-column gap-2 small text-muted">
+                        <li class="d-flex align-items-start gap-2"><i class="bi bi-geo-alt-fill"
+                                style="color:var(--primary);"></i> Malang, Jawa Timur, Indonesia</li>
+                        <li class="d-flex align-items-center gap-2"><i class="bi bi-whatsapp"
+                                style="color:var(--primary);"></i> 0822-1122-1909</li>
+                        <li class="d-flex align-items-center gap-2"><i class="bi bi-envelope"
+                                style="color:var(--primary);"></i> hello@gemilangkatun.com</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <div class="rounded-3 overflow-hidden" style="height:180px;">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFsNtEpYPh2vUAvR9CmSiDWWbtgzQRnhyKryW1vernnOaa7YgdU2tgJKQZWPDjt4OjMO_TdjTGdnIYLFGbQVYFeRkKZsuFRa5l2vLCVjChmPZQQ9mwcN3M6r7PC0d55Vda3rowjzREWcXPkzgdqLd5Zv8hD4LpXjHX7ADBozhYpADLTYfoEhqQno7mWAJ6GQcJS96qfTrTyrP8yA7ZKhtBpO7_05S3TxzTogdA7NNcAkpvo_YH8b5oVXB01VKFekYAHKWzEaQp_28"
+                            alt="Peta Malang" class="w-100 h-100" style="object-fit:cover;" />
+                    </div>
+                </div>
+            </div>
+            <div
+                class="border-top pt-4 d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+                <p class="text-muted small mb-0">© 2024 Gemilang Katun Outbound. Hak cipta dilindungi.</p>
+                <div class="d-flex gap-3"><a href="#" class="small">Kebijakan Privasi</a><a href="#"
+                        class="small">Syarat & Ketentuan</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-buttons">
+        <button class="btn-scroll-top" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i
+                class="bi bi-arrow-up"></i></button>
+        <a href="https://wa.me/6282211221909" target="_blank" class="btn-wa" title="Chat via WhatsApp"><i
+                class="bi bi-whatsapp"></i></a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        window.addEventListener('scroll', function () {
+            var b = document.getElementById('scrollTopBtn');
+            b.classList.toggle('show', window.scrollY > 300);
+            document.getElementById('mainNavbar').classList.toggle('scrolled', window.scrollY > 10);
+        });
+    </script>
+</body>
+
+</html>
