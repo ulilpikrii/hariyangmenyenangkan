@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://hariyangmenyenangkanweb2.vercel.app/sitemap.xml
