@@ -1,0 +1,37 @@
+$urls = @(
+"https://lh3.googleusercontent.com/aida-public/AB6AXuBiGqrY7MVjYXUGhHAHf8FrEBRJHAxaHamHFx7Qw7-D_yuoyItleho9XUJNdraZnJvBSpNEM95wVnlwTIkYVzYFxV4Dm3Ro2BHNU-fW0qZSuXE58CE8qAzTkXefC8iIm2XcS6ofc1vMM40XSOYvAx_GtdaN3EHWvy1PVylrBs3UZ5Zs2yT6sfd-jaUJzccIB9Pse_zmJbITCmfm_MDk5IUQNjS0dwRIjKSr3kyPp1u4QN3-Ig313ip8iPepCX9P145uP3VDGIftK4k",
+"https://lh3.googleusercontent.com/aida-public/AB6AXuAFsNtEpYPh2vUAvR9CmSiDWWbtgzQRnhyKryW1vernnOaa7YgdU2tgJKQZWPDjt4OjMO_TdjTGdnIYLFGbQVYFeRkKZsuFRa5l2vLCVjChmPZQQ9mwcN3M6r7PC0d55Vda3rowjzREWcXPkzgdqLd5Zv8hD4LpXjHX7ADBozhYpADLTYfoEhqQno7mWAJ6GQcJS96qfTrTyrP8yA7ZKhtBpO7_05S3TxzTogdA7NNcAkpvo_YH8b5oVXB01VKFekYAHKWzEaQp_28",
+"https://lh3.googleusercontent.com/aida-public/AB6AXuD5vBtk-sgV4tWOE23nC8tmum74KtXwEHwh97jk-7si9R4tBUMkKf0qxbA2v1zFq5tTavKQWX0YCbdu1yhTVlS_32TGCZ21g5OOPrz8TLm3jxS06PN8YKBUK4GoOdtQRAvSX1sA-wHxDC5InCBjD3n_r9T-bJr30wGVxrYUSNcK-8SitavhbZZrDORSUx383aG3AKYQsle5VtZ9cIZU5EsNSiQRlZROXZuF5bn0UGidhuXNcyVSGr3_DmIOOkCL3xvS7XRxoksdPOY",
+"https://lh3.googleusercontent.com/aida-public/AB6AXuDXlU_FbeoybZZStB_Ir6O4FNpzDNnr86O-heGi15MB8G_lkuxfSzKziWflyieccMwJospKfzrPBtv_wpNDfx1kPjFwZmeDjylUh4tv1C0PkZHXTGuDNvj9FEhchEkpvMLHWM-ToAS63wwfRt3z0InJ3oIkqV-l7u7NwEsWuw_me5Oq7HdIGKJm_eec9RIfP4OzHF2KNyraZqevR4eFVKVVktVKr1lV_jaoC9iElKr6c1q6s8MhuzFw0YEJ6BopGMuARMNMv_Yyk4Q",
+"https://lh3.googleusercontent.com/aida-public/AB6AXuA285gJtqeCY9v_JlpTTc0CWQbv61mDXE-N3_jJIDgPl4YdXLBYe5baI3KRuUo05Z-U4eeXXVco6-AP2xbRpNQc51srzJumCO5rQPE39I70fAHeAaLsxETE0y9cV2ncSRM-894zoK3s4oC7kkJUNWzbynVYB_i_ExQGEQZCufrSaANHSod3rW5K1zQ5uzUMfFtvvBERLcipSHG8JQaRQnVWoBUwYohP8KDofEv3XMq3N-bu7I8YZ2JBONMZ2ty6KfGVGHpnJYrirRE",
+"https://lh3.googleusercontent.com/aida-public/AB6AXuA9u-MgEuyiNX3ezhNOOjk0uReP8ol4Gm5FomXccvINFPoVZsYs-QnxkFQmxM4qFwxZq_LUbFvUM9QRmR0UB24pA7TFz3rkpFZyqRwmb-HhLBpDmFl4glU6zU1bbt84TPkTquKrG1Rf4IuBXnN__MVkHdWdnoeaxhiOHDIOEUV7XTazBT3tMv1tI1e2ZLqyfmLZZpByEKYvhot-N-1zyWvN5ZXvYlNx1OyQpe6ce2r8raSjx1rFKd00OWK01FpHjY-R51MWKERTu98",
+"https://lh3.googleusercontent.com/aida-public/AB6AXuDtuPnTOfp86gzrexSq9ntT5apsnmE15JSxzLvncJqibAYAqPHQHeMa3MYEHpIYPUoE_yM0SYI3HRnwpGQFMGQPDlOHcQrdRyOykXg2nKXPvZqLxEjTI8NGNmWltiEZ9_Epa0Arpr9q1w6ARwpcgpVD2DdEhJk1J4gd0f5qCVZ8wZ8OmpSak1LlU7IbXq3KvENwcXT4ZmYKW-4qZuwMFiolWgxopbzdrxZXeB2pdsE7DYZUn-eROYIMOs9uJq-61d1lLFQT-JtP55U",
+"https://lh3.googleusercontent.com/aida-public/AB6AXuCsvp6NJDJGSCGnrl2qvhxo139wxRdM9g9OSzfqu8BdtZMSj0F0Oo6hsxRQ9CsjPzJzY_-kI2eF9mRZcia-PGzTzRQXZJXehMajoBSIZud3hEbE72eA7jqfuNdfbxxEhR2E7QujBqNr5Raaoe0FRw4KEAF_HNAKRVS-VZVkXAeGXdXJp6eVTvziv3JS8BrlZ8FeBY0JwSsEoCVbOtEt62eskIzSJbfSt-O4_dXfZlA544eqIeNv--DOAVH1L7RevCOnb_8DSSAgKSk",
+"https://lh3.googleusercontent.com/aida-public/AB6AXuAdqg6GuJ5JGj3vzsH71BARXLLRh8GDbuSourKGcAweTviQaHmHz0vNRJmuo7XqTm2Y9OlLjGzayEFkety5C3IJgQXiYcB4wauXe9ehLDR4nXThhDsQTwdXSi6BQXlEsqMCvGtTLDB8PF1rO1eP9JKUEuGbp7Ci-XZugzONhAVPNGCaqc6URa8cOiFjDkxU5iUS7KMZm6XLW01tjYk_HfnJ37eJ_Hpu0BJd1B3nEbJNy3IJe5moVzDRS400QnJPmFoHTUdP0cffRhI",
+"https://lh3.googleusercontent.com/aida-public/AB6AXuCIPyuxRZoRYkdayHHoBU0mwtzyl6LgciPBB7OsUQMyPNjkAk_O7MAFua06xHY3prvbpWLP12nWVu-2OVQUZEJHJWf8LRGpRW9HW2YVU_XMag3yntpfhNbJIySIRHpAEOQ5BiiUPJpDWQ7l1a4_LymXQ4I9F9-X2LecxfJYQaE4mQ4c4Pkr61Qja_ydF_XYhm0kEG8-JfPfwW4cSy58Ju_4yox7y70Nih4kqYG2TpDHlNY04ziVxThN9O862GNZSB6D5VKBFZRRK2w",
+"https://lh3.googleusercontent.com/aida-public/AB6AXuBnSN-JbmOAk0exCT09lNsWy1G-WBXE19tDTD23Hw3JUbxt9bC3vZizxwOAr9txFsMd8XqhD9qdunUPH8iXuu6_B1Gt4AszRszi-ZC85hExnXxvOn_ZbEJ89i4eX_-tKmPS-EBLuE-_equgYMeQRLLiqoGqDhUTzV9aNivYIBlBR-gv0HexTksnzwys0LYk284hxq7cJp1Q-L6DdiSpQ-fxxeh3dw5u_v4BE-i35fHppurvoKQM7DUIpnHlFF5IJQp4DwsukYU2xyI",
+"https://lh3.googleusercontent.com/aida-public/AB6AXuCYmP5EkCig8W34R-FP8wrJCpp3e5Pgw_iPVoB5f5TYISPbXTG-g890viNWR9onRghrzoO0FP5cdsinjXc_J00YAFY2qy3rcv_owTzBdOHVMhcDjFOUeyFhkMyf6iTB44JXlEfq7MS3SyRiIGb2lBREsd-2wGKtqk3lOJp7VPLmcQq5mVzrQmLQZvLeMC4aQ-qHZSZg5x92-q4XMqICVdSrcmT2bvbofXWrJVOqF8n_2SUGvsr7ZvJLJuuiTVVZRgwNsp0MaJhKhjg",
+"https://lh3.googleusercontent.com/aida-public/AB6AXuCoiEV-34Nu7ZY1tK8yX2cyN0Nf6Bdqi3FEmppW6vyrv09q1sME8Aa6v3Izv3D1RvWXtoHy1OG5g_ipBVabXykIyPg9AKuCNEvmIqDnXV3u5sIwQYnC8hzzqiXFmzCy_tjZbuodSiRFHgTCOn4B1qrir_TPFuOGmD3ZA36OXl_a5e6Ey9FSPTmqJtSxFrUzHXr2NU2QMcF4SLK49RteLDfacCSxe6t6xQZ2L4mcNMq2HuO6lKSkFDouRgcI19nJWwx7PmpbI2eIs9I"
+)
+
+New-Item -ItemType Directory -Force -Path "assets/img"
+
+$i = 1
+foreach ($url in $urls) {
+    # Appending =w1200-rw to force Google to return WebP
+    $downloadUrl = $url + "=w1200-rw"
+    $filename = "assets/img/image-${i}.webp"
+    Write-Host "Downloading $filename"
+    Invoke-WebRequest -Uri $downloadUrl -OutFile $filename
+    
+    # Replace in all HTML files
+    Get-ChildItem -Filter "*.html" | ForEach-Object {
+        $content = Get-Content -Raw -Path $_.FullName
+        if ($content -match [regex]::Escape($url)) {
+            $content = $content -replace [regex]::Escape($url), $filename
+            Set-Content -Path $_.FullName -Value $content -Encoding UTF8
+        }
+    }
+    $i++
+}
+Write-Host "Done downloading and updating HTML files."
